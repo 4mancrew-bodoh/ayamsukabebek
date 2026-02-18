@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Alam Gunung Puntang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2E7D32;   
+            --secondary-brown: #F1F8E9; 
+            --accent-blue: #0288D1;     
+            --light-bg: #F1F8E9;       
+            --text-dark: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        section {
+            padding: 4rem 1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a:hover {
+            color: #A5D6A7;
+            transition: 0.3s;
+        }
+      .hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('Z:/MichaelAndrew suka PHP/PROYEK/Cover2.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn-cta {
+            background-color: var(--secondary-brown);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: #5D4037;
+        }
+
+        .about {
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .history {
+            background-color: var(--white);
+        }
+        
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .history-text {
+            text-align: left;
+        }
+
+        .history-img img {
+            box-shadow: 0 0px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .attractions {
+            background-color: #eef5e9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-green);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body h3 {
+            color: var(--secondary-brown);
+            font-size: 1.25rem;
+        }
+
+        .facilities {
+            background-color: var(--white);
+        }
+
+        .facilities-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .facility-item {
+            background: var(--primary-green);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .access-info {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-left: 5px solid var(--accent-blue);
+            margin-top: 2rem;
+        }
+
+        .tips {
+            background-color: var(--secondary-brown);
+            color: var(--white);
+        }
+
+        .tips p, .tips li {
+            color: #000000;
+        }
+
+        .tips h2 {
+            color: var(--white);
+            text-align: center;
+        }
+       footer {
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+footer h3,
+footer p {
+    color: #000000;
+}
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .history-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none; 
+            }
+            
+            nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Gunung Puntang</div>
+                <div class="nav-links">
+                    <a href="#beranda">Beranda</a>
+                    <a href="#tentang">Tentang</a>
+                    <a href="#sejarah">Sejarah</a>
+                    <a href="#wisata">Daya Tarik</a>
+                    <a href="#akses">Akses</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="beranda" class="hero">
+        <div class="container hero-content">
+            <h1>Wisata Alam Gunung Puntang – Keindahan Alam & Jejak Sejarah</h1>
+            <p>Jelajahi pesona pegunungan yang asri, hirup udara segar hutan pinus, dan telusuri jejak kejayaan komunikasi dunia di Bandung Selatan.</p>
+            <a href="#tentang" class="btn-cta">Jelajahi Sekarang</a>
+        </div>
+    </section>
+
+    <section id="tentang" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Gunung Puntang</h2>
+            <p>Terletak di jajaran Pegunungan Malabar, Kabupaten Bandung, Jawa Barat, Gunung Puntang menawarkan destinasi wisata dengan ketinggian sekitar 1.300 mdpl (area wisata) hingga puncak 2.223 mdpl.</p>
+            <p>Kawasan ini dikenal dengan hutan pinusnya yang rapat, perkebunan kopi yang mendunia, serta aliran sungai yang jernih. Dengan suhu rata-rata 18-23 derajat celcius, tempat ini menjadi surga bagi pecinta hiking, camping, dan fotografi alam yang mencari ketenangan dari hiruk pikuk perkotaan.</p>
+        </div>
+    </section>
+
+    <section id="sejarah" class="history">
+        <div class="container">
+            <h2 class="section-title">Jejak Sejarah Dunia</h2>
+            <div class="history-grid">
+                <div class="history-text">
+                    <h3>Stasiun Radio Malabar</h3>
+                    <p>Gunung Puntang bukan sekadar wisata alam, melainkan saksi bisu sejarah komunikasi dunia. Pada masa kolonial Belanda (1923), di sini berdiri <strong>Stasiun Radio Malabar</strong> yang dirancang oleh Dr. de Groot.</p>
+                    <p>Stasiun ini tercatat sebagai salah satu pemancar radio terbesar dan terkuat di dunia pada masanya. Ia menghubungkan komunikasi nirkabel langsung antara Bandung (Hindia Belanda) dan Den Haag (Belanda) yang berjarak 12.000 km.</p>
+                    <p>Hingga kini, pengunjung masih dapat melihat reruntuhan bangunan, Kolam Cinta, dan struktur pemancar yang menjadi bukti kejayaan teknologi masa lalu.</p>
+                </div>
+                <div class="history-img">
+                    <img src="Z:/MichaelAndrew suka PHP/PROYEK/radio.jpg" alt="Reruntuhan Sejarah">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="wisata" class="attractions">
+        <div class="container">
+            <h2 class="section-title">Daya Tarik Wisata</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Z:/MichaelAndrew suka PHP/PROYEK/camping.jpg">
+                    <div class="card-body">
+                        <h3>Camping Ground</h3>
+                        <p>Area kemah yang luas dengan rumput hijau dan naungan pohon pinus. Fasilitas lengkap untuk pengalaman camping ceria maupun solo camping.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Z:/MichaelAndrew suka PHP/PROYEK/curug.jpg">
+                    <div class="card-body">
+                        <h3>Curug Siliwangi</h3>
+                        <p>Air terjun eksotis yang menantang untuk dijangkau. Membutuhkan trekking ringan namun terbayar dengan kesegaran air pegunungan.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Z:/MichaelAndrew suka PHP/PROYEK/kopi.jpg">
+                    <div class="card-body">
+                        <h3>Wisata Kopi</h3>
+                        <p>Nikmati Kopi Puntang yang legendaris, salah satu kopi terbaik di dunia, langsung di tengah perkebunannya.</p>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="akses" class="facilities">
+        <div class="container">
+            <h2 class="section-title">Fasilitas & Akses</h2>
+            
+            <div class="facilities-list">
+                <div class="facility-item">Area Parkir Luas</div>
+                <div class="facility-item">Mushola & Toilet Bersih</div>
+                <div class="facility-item">Warung Makan 24 Jam</div>
+                <div class="facility-item">Pos Informasi</div>
+                <div class="facility-item">Sewa Tenda</div>
+            </div>
+
+            <div class="access-info">
+                <h3>Rute Menuju Lokasi</h3>
+                <p><strong>Dari Kota Bandung:</strong> Gunung Puntang berada sekitar 38 kilometer di selatan Kota Bandung. Untuk menuju ke sini, paling nyaman memang menggunakan kendaraan pribadi. Jika kamu naik mobil, ambil Jalan Tol Soreang-Pasir Koja dan keluarlah di Soreang menuju Jalan Raya Gading Tutuka. Dari sana, lanjutkan perjalanan menuju Jalan Raya Pangalengan hingga Cimaung, dan kamu pun tiba di Jalan Gunung Puntang.</p>
+                <p>Jika kamu pergi naik sepeda motor, kamu bisa mengambil jalur via Jalan Dayeuhkolot, terus ke selatan melewati Cikupa via Jalan Raya Banjaran. Teruslah ke selatan di Jakan Mekar Jaya-Sindang Panon dan kamu akan tiba di Jalan Gunung Puntang. Sepanjang jalan, kamu akan dimanjakan oleh suasana hijau persawahan dan udara yang semakin sejuk!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips">
+        <div class="container">
+            <h2 class="section-title" style="color: black;">Tips Berkunjung</h2>
+            <ul>
+                <li><strong>Waktu Terbaik:</strong> Datanglah pada musim kemarau (Mei - September) untuk menghindari jalan licin dan mendapatkan pemandangan langit cerah.</li>
+                <li><strong>Pakaian:</strong> Gunakan jaket tebal dan pakaian hangat, suhu malam hari bisa sangat dingin.</li>
+                <li><strong>Alas Kaki:</strong> Gunakan sepatu atau sandal gunung yang nyaman untuk trekking.</li>
+                <li><strong>Etika:</strong> Dilarang keras membuang sampah sembarangan (bawa turun sampahmu) dan merusak situs sejarah.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Contact for more information</h3>
+            <p>0816 1803 3988</p>
+        </div>
+    </footer>
+
+</body>
+</html>
